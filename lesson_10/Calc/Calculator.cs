@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 namespace lesson_10.Calc
 {
     public class Calculator
@@ -50,22 +51,22 @@ namespace lesson_10.Calc
 
             if (opperatorType == addWordsToDetect[0] || opperatorType == addWordsToDetect[1] || opperatorType == addWordsToDetect[2])
             {
-                getNumbers("Add");
+                getNumbers("Add", name);
             }
 
             if (opperatorType == subtractWordsToDetect[0] || opperatorType == subtractWordsToDetect[1] || opperatorType == subtractWordsToDetect[2])
             {
-                getNumbers("Subtract");
+                getNumbers("Subtract", name);
             }
 
             if (opperatorType == multiplyWordsToDetect[0] || opperatorType == multiplyWordsToDetect[1] || opperatorType == multiplyWordsToDetect[2])
             {
-                getNumbers("Multiply");
+                getNumbers("Multiply", name);
             }
 
             if (opperatorType == devideWordsToDetect[0] || opperatorType == devideWordsToDetect[1] || opperatorType == devideWordsToDetect[2])
             {
-                getNumbers("Devide");
+                getNumbers("Devide", name);
             }
 
             // If not but the opperatorType user input contains any of the key words to detect then we guess
@@ -119,7 +120,7 @@ namespace lesson_10.Calc
             string userConfirm = Console.ReadLine();
             if (userConfirm == "Yes" || userConfirm == "yes" || userConfirm == "Y" || userConfirm == "y")
             {
-                getNumbers(opperatorType);
+                getNumbers(opperatorType, name);
             }
             else
             {
@@ -129,15 +130,41 @@ namespace lesson_10.Calc
             return "";
         }
 
-        public static string getNumbers(string opperatorType)
+        public static string getNumbers(string opperatorType, string name)
         {
+            // Setting variables
+            int firstNumberInt = 0;
+            int secondNumberInt = 0;
+
+            // First number
             Console.WriteLine("What's the starting number?");
             string firstNumber = Console.ReadLine();
+
+            // First number error handling
+            if (Regex.IsMatch(firstNumber, @"^\d+$"))
+            {
+                firstNumberInt = Int32.Parse(firstNumber);
+            }
+            else
+            {
+                Console.WriteLine("Please only use numeric characters 0 - 9");
+                getNumbers(opperatorType, name);
+            };
+
+            // Second number
             Console.WriteLine("And the second number?");
             string secondNumber = Console.ReadLine();
 
-            int firstNumberInt = Int32.Parse(firstNumber);
-            int secondNumberInt = Int32.Parse(secondNumber);
+            // Second number error handling
+            if (Regex.IsMatch(secondNumber, @"^\d+$"))
+            {
+                secondNumberInt = Int32.Parse(secondNumber);
+            }
+            else
+            {
+                Console.WriteLine("Please only use numeric characters 0 - 9");
+                getNumbers(opperatorType, name);
+            }
 
             if (opperatorType == "Add")
             {
@@ -155,10 +182,10 @@ namespace lesson_10.Calc
             {
                 devide(firstNumberInt, secondNumberInt);
             }
-            return "";
+            return Finish(name);
         }
 
-        public static string opperatorTypeErrorHandling(string name)
+            public static string opperatorTypeErrorHandling(string name)
         {
             Console.WriteLine("Sorry I didn't understand, please type 'add' if you would like to add, 'subtract' if you would like to subtract, 'multiply' if you would like to multiply or 'devide' if you would like to devide.");
             string opperatorType = Console.ReadLine();
@@ -200,7 +227,6 @@ namespace lesson_10.Calc
             if (userConfirm == "Yes" || userConfirm == "yes" || userConfirm == "Y" || userConfirm == "y")
             {
                 return startCalculator(name);
-                // TODO replace this with greeting when I can figure out how
             }
             else
             {
