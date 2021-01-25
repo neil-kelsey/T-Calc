@@ -1,0 +1,15 @@
+/Users/neil.kelsey/Projects/lesson_10/lesson_10/bin/Debug/net5.0/lesson_10.deps.json
+/Users/neil.kelsey/Projects/lesson_10/lesson_10/bin/Debug/net5.0/lesson_10.runtimeconfig.json
+/Users/neil.kelsey/Projects/lesson_10/lesson_10/bin/Debug/net5.0/lesson_10.runtimeconfig.dev.json
+/Users/neil.kelsey/Projects/lesson_10/lesson_10/bin/Debug/net5.0/lesson_10.dll
+/Users/neil.kelsey/Projects/lesson_10/lesson_10/bin/Debug/net5.0/ref/lesson_10.dll
+/Users/neil.kelsey/Projects/lesson_10/lesson_10/bin/Debug/net5.0/lesson_10.pdb
+/Users/neil.kelsey/Projects/lesson_10/lesson_10/obj/Debug/net5.0/lesson_10.csprojAssemblyReference.cache
+/Users/neil.kelsey/Projects/lesson_10/lesson_10/obj/Debug/net5.0/lesson_10.GeneratedMSBuildEditorConfig.editorconfig
+/Users/neil.kelsey/Projects/lesson_10/lesson_10/obj/Debug/net5.0/lesson_10.AssemblyInfoInputs.cache
+/Users/neil.kelsey/Projects/lesson_10/lesson_10/obj/Debug/net5.0/lesson_10.AssemblyInfo.cs
+/Users/neil.kelsey/Projects/lesson_10/lesson_10/obj/Debug/net5.0/lesson_10.csproj.CoreCompileInputs.cache
+/Users/neil.kelsey/Projects/lesson_10/lesson_10/obj/Debug/net5.0/lesson_10.dll
+/Users/neil.kelsey/Projects/lesson_10/lesson_10/obj/Debug/net5.0/ref/lesson_10.dll
+/Users/neil.kelsey/Projects/lesson_10/lesson_10/obj/Debug/net5.0/lesson_10.pdb
+/Users/neil.kelsey/Projects/lesson_10/lesson_10/obj/Debug/net5.0/lesson_10.genruntimeconfig.cache
